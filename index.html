@@ -1,13 +1,58 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
+    <title>語言學習平台</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello</h1>
-    <h2>HomePage</h2>
-    
+    <header>
+        <h1>語言學習平台</h1>
+        <nav>
+            <ul>
+                <li><a href="#vocabulary" onclick="showSection('vocabulary')">基礎詞彙</a></li>
+                <li><a href="#grammar" onclick="showSection('grammar')">簡單語法</a></li>
+                <li><a href="#dialogue" onclick="showSection('dialogue')">簡單對話</a></li>
+                <li><a href="#progress" onclick="showSection('progress')">學習進度</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="vocabulary" class="content">
+            <h2>基礎詞彙</h2>
+            <div id="vocabList" class="card-container">
+                <!-- 詞彙列表 -->
+            </div>
+            <button class="btn" onclick="addVocabulary()">學習新單詞</button>
+        </section>
+
+        <section id="grammar" class="content">
+            <h2>簡單語法</h2>
+            <p>例句：我喜歡學習語言。</p>
+            <p>語法結構：主詞 + 動詞 + 賓語</p>
+        </section>
+
+        <section id="dialogue" class="content">
+            <h2>簡單對話練習</h2>
+            <p>對話範例：<br> A: 你好！<br> B: 你好！你叫什麼名字？</p>
+            <audio controls>
+                <source src="dialogue.mp3" type="audio/mpeg">
+                你的瀏覽器不支持音頻元素。
+            </audio>
+        </section>
+
+        <section id="progress" class="content">
+            <h2>學習進度</h2>
+            <p>已學習詞彙：<span id="learnedWords">0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 語言學習平台</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
